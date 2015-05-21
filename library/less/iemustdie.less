@@ -1,0 +1,42 @@
+//
+// IE Fixes
+// --------------------------------------------------
+html, body{
+    font-size: 87.5%;
+    line-height: 1.4em;
+}
+#main-student {
+    font-size: @fontSizeLarge;
+    font-weight: bold;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li{
+        float: left;
+        width: auto;
+        margin-right:  @baseFontSize/2;
+        margin-bottom: 0;
+        a{
+            color: @white;
+            display: block;
+            padding: .5em;
+        }
+        a:focus, a:active, a.focused, a:hover{
+            text-decoration: none;
+            background: @blueDark;
+        }
+        i {
+            margin-top: .25em;
+            text-decoration: none;
+            padding: 0;
+        }
+    }
+}
+//h3.tagline {
+  //  bottom: auto;
+  //position: relative;
+//}
+.one-third .main-col{
+    padding-bottom: 1em;
+}

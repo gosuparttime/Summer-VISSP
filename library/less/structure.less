@@ -1,0 +1,230 @@
+//
+// Summer @ SU - Page Elements
+// --------------------------------------------------
+#wrapper{
+    position: relative;
+}
+#logo{
+    position: relative;
+    width: 40%;
+    display: block;
+    overflow: visible !important;
+    .branding{
+        position: absolute;
+        top: -4.5em;
+        padding-left: 1em;
+        z-index: 9999;
+        float: left;
+    }
+}
+#inner-header{
+    position: relative;
+    z-index: 9000;
+}
+.clear-logo{
+    margin-top: 3em;
+    .pad-two;
+}
+#content{
+    padding-bottom: 1em
+}
+#inner-footer{
+    color: @white;
+    font-size: @fontSizeSmall;
+    position: relative;
+    padding: 1em 0 0 0;
+    ul{
+        padding: 0;
+        margin:0;
+        list-style-type: none;
+    }
+    a {
+        color: @white;
+        i {
+            margin-right: .5em;
+            text-decoration: none;
+        }
+    }
+    h4{
+        padding-left:0;
+        margin-bottom: 0;
+        margin-top: .25em;
+        color: @white;
+        border: none;
+    }
+    #seal{
+        //right: 0;
+        //top: 0;
+        //z-index: -1;
+        max-height: 17em;
+        overflow: hidden;
+        //position: absolute;
+    }
+    #rule {
+        border-bottom: 2px solid @white;
+    }
+}
+#main{
+    min-height: 35em;
+}
+#student-menu{
+    //position: relative;
+}
+div.info-panel {
+     & h3.block {
+            padding-left: @baseFontSize*2;
+            margin-top: 0;//-(@baseFontSize*2);
+    }
+}
+.video-player {
+    max-width: 100%;
+}
+.two-thirds{
+    width: 67%;
+    float: left;
+    position: relative;
+}
+.one-third{
+    width: 33%;
+    float: left;
+    &.last {
+        width: 34%;
+    }
+    & > div{
+        padding: 0 @baseFontSize 0 @baseFontSize*2;
+        & .block {
+            padding-left: @baseFontSize*2;
+            margin-left: -(@baseFontSize*2);
+        }
+        &.below > div {
+            padding-bottom: @baseFontSize;
+        }
+    }
+   
+}
+.half{
+    width: 50%;
+    float: left;
+    & > div{
+        padding: 0 @baseFontSize 0 @baseFontSize*2;
+        & .block {
+            padding-left: @baseFontSize*2;
+            margin-left: -(@baseFontSize*2);
+        }
+        &.below > div{
+            padding-bottom: @baseFontSize;
+        }
+    }
+}
+.one-half{
+    width: 47%;
+    margin-right: 3%;
+    float: left;
+}
+.one-quarter{
+    width: 25%;
+    float: left;
+    & > div{
+        padding: 0 @baseFontSize 0 @baseFontSize*2;
+        & .block {
+            padding-left: @baseFontSize*2;
+            margin-left: -(@baseFontSize*2);
+        }
+        &.below > div {
+            padding-bottom: @baseFontSize;
+        }
+    }
+}
+#contactForm{
+    .pad-one-t;
+}
+div.info-panel div{
+    div.list-links{
+        padding: 0 @baseLineHeight;
+    }
+    div.copy-block{
+        padding: 2px 2em 0 1em;
+        p:first-child{
+            margin-top: .5em;
+        }
+    }
+    h4.section-head{
+        margin: 0 0 .7em 0;
+        padding: .3em 0;
+        border-bottom: 1px solid;
+        border-top: none;
+    }
+}
+ul.list-links, .list-links ul, .list-links li{
+    list-style-type: none;
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+.list-links li{
+    margin-bottom: .5em;
+    i{
+        margin-left: -1.25em;
+        text-align: center;
+        margin-right: 0;
+        padding: 0;
+    }
+    a i{
+        margin-left: 0;
+    }
+}
+* a:hover i{
+    text-decoration: none;
+}
+.sidebar .btn-blue{
+   margin: 0 !important;
+}
+.date-separate{
+    .mar-one-b;
+}
+.google-map{
+    padding: 1em 1em 1em 2em;
+    font-size: 80%;
+}
+#main-student li.the-end{
+    float: right;
+}
+ul#social-icons li{
+    padding: 0;
+    a{
+        display:block;
+    }
+    a i{
+        margin-right: .2em;
+        width: 1em;
+        &:hover{
+             color: @blueDark;
+        }
+    }
+}
+#summer-feature{
+    position: relative;
+    div.pad-one-t{
+        padding-top: 0;
+    }
+}
+
+#myCarousel{
+    position: relative;
+}
+#procedures{
+    .accordion-heading{
+        background: @red;
+        color: @white;
+        font-weight: bold;
+        margin-bottom: 1px;
+        a{
+            color: @white;
+        }
+    }
+}
+.featured-section{
+    position: relative;
+    .above{
+        position: absolute;
+    }
+}

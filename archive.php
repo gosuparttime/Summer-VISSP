@@ -1,0 +1,107 @@
+<?php get_header(); ?>
+
+<div id="content" class="clearfix row-fluid">
+<div id="main" class="span8 clearfix white-bg" role="main">
+  <div class="orange-bg pad-one-t"></div>
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <div class="clear-logo orange-text">
+    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <div class="page-header">
+          <hgroup>
+            <?php if (is_category()) { ?>
+            <h1 class="page-title" itemprop="headline"> <span>
+              <?php _e("Posts Categorized:", "summertheme"); ?>
+              </span>
+              <?php single_cat_title(); ?>
+            </h1>
+            <?php } elseif (is_tag()) { ?>
+            <h1 class="page-title" itemprop="headline"> <span>
+              <?php _e("Posts Tagged:", "summertheme"); ?>
+              </span>
+              <?php single_tag_title(); ?>
+            </h1>
+            <?php } elseif (is_author()) { ?>
+            <h1 class="page-title" itemprop="headline"> <span>
+              <?php _e("Posts By:", "summertheme"); ?>
+              </span>
+              <?php get_the_author_meta('display_name'); ?>
+            </h1>
+            <?php } elseif (is_day()) { ?>
+            <h1 class="page-title" itemprop="headline"> <span>
+              <?php _e("Daily Archives:", "summertheme"); ?>
+              </span>
+              <?php the_time('l, F j, Y'); ?>
+            </h1>
+            <?php } elseif (is_month()) { ?>
+            <h1 class="page-title" itemprop="headline"> <span>
+              <?php _e("Monthly Archives:", "summertheme"); ?>
+              :</span>
+              <?php the_time('F Y'); ?>
+            </h1>
+            <?php } elseif (is_year()) { ?>
+            <h1 class="page-title" itemprop="headline"> <span>
+              <?php _e("Yearly Archives:", "summertheme"); ?>
+              :</span>
+              <?php the_time('Y'); ?>
+            </h1>
+            <?php } ?>
+            <h3 class="block"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+              <?php the_title(); ?>
+              </a></h3>
+          </hgroup>
+        </div>
+      </header>
+      <section class="post_content">
+        <?php the_post_thumbnail( 'wpbs-featured' ); ?>
+        <?php the_excerpt(); ?>
+      </section>
+      <!-- end article section -->
+      
+      <footer> </footer>
+      <!-- end article footer --> 
+      
+    </article>
+    <!-- end article -->
+    
+    <?php endwhile; ?>
+    <?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
+    <?php page_navi(); // use the page navi function ?>
+    <?php } else { // if it is disabled, display regular wp prev & next links ?>
+    <nav class="wp-prev-next">
+      <ul class="clearfix">
+        <li class="prev-link">
+          <?php next_posts_link(_e('<i class="icon-chevron-left"></i> Older Entries', "summertheme")) ?>
+        </li>
+        <li class="next-link">
+          <?php previous_posts_link(_e('Newer Entries <i class="icon-chevron-right"></i>', "summertheme")) ?>
+        </li>
+      </ul>
+    </nav>
+    <?php } ?>
+    <?php else : ?>
+    <article id="post-not-found">
+      <header>
+        <div class="page-header">
+          <h1>
+            <?php _e("No Posts Yet", "summertheme"); ?>
+          </h1>
+        </div>
+      </header>
+      <section class="post_content">
+        <p>
+          <?php _e("Sorry, What you were looking for is not here.", "summertheme"); ?>
+        </p>
+      </section>
+      <footer> </footer>
+    </article>
+    <?php endif; ?>
+    <div class="visible-phone mar-one"><a href="#top" id="to-top" class="pad-one">Back to top <i class="icon-circle-arrow-up"></i></a></div>
+  </div>
+  <!-- end #main -->
+  
+  <?php get_sidebar(); // sidebar 1 ?>
+</div>
+<!-- end #content -->
+
+<?php get_footer(); ?>

@@ -1,0 +1,5 @@
+html,body{font-size:87.5%;line-height:1.4em;}
+#main-student{font-size:1.2em;font-weight:bold;font-weight:900;margin:0;padding:0;list-style-type:none;}#main-student li{float:left;width:auto;margin-right:7.5px;margin-bottom:0;}#main-student li a{color:#ffffff;display:block;padding:.5em;}
+#main-student li a:focus,#main-student li a:active,#main-student li a.focused,#main-student li a:hover{text-decoration:none;background:#005494;}
+#main-student li i{margin-top:.25em;text-decoration:none;padding:0;}
+.one-third .main-col{padding-bottom:1em;}

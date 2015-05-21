@@ -1,0 +1,84 @@
+/*
+Theme Name: Summer At SU - Visiting International Student Summer Program
+Theme URI: http://summer.syr.edu
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 1.0
+Author: Devin Kerr
+Author URI: http://dkerrcreative.com
+Tags: black, white, one-column, two-columns, flexible-width, custom-background, custom-colors, custom-menu, full-width-template, theme-options
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+/* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
+/* wp-specific classes */
+.wp-caption{
+	
+}
+
+.wp-caption-text{
+	
+}
+
+.sticky{
+	
+}
+
+.gallery-caption{
+	
+}
+
+/* layout */
+span.wpcf7-list-item{
+	margin: 0;
+	padding: 0;
+}
+
+span#campus span.wpcf7-list-item input{
+	font-size:1.4em;
+	margin: 0 .33em 0 0;
+}
+/* = Remove Formatting from The Event Calendar	
+----------------------------------------------- */
+ 
+#tribe-events-content{
+	margin:0;
+	padding:0;
+}
+h2.entry-title{
+	margin:0;
+}
+#tribe-events-calendar-header, .tribe-events-calendar, #tribe-events-content .ical, .events-single #content .ical, a.gmap, .tribe-events-event-list-meta td, .tribe-events-nav, #tribe-events-event-meta, span.back, .eventsListWidget .dig-in, .eventsAdvancedListWidget .dig-in, .gcal-add {
+	font-family:inherit;
+}
+.tribe-events-month-nav a, .tribe-events-nav a, .back a, .eventsListWidget .dig-in a, .eventsAdvancedListWidget .dig-in a {
+	color:#fff;
+	text-decoration:none;
+}
+#tribe-events-nav-below .tribe-events-nav-previous, #tribe-events-nav-below .tribe-events-nav-next{
+	min-width: 25%;
+	max-width: 33%;
+}
+#tribe-events-event-meta {
+	font-size: .9375em;
+	border: none;
+}
+#tribe-events-nav-below .tribe-events-nav-next{
+	margin-right: -1em;
+}
